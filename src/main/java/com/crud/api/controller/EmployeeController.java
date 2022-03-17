@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.crud.api.exception.ResourceNotFoundException;
 import com.crud.api.model.Employee;
-import com.crud.api.model.Login;
+
 import com.crud.api.repository.EmployeeRepository;
-import com.crud.api.repository.LoginRepository;
+
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
@@ -30,8 +30,7 @@ public class EmployeeController {
 	@Autowired
 	private EmployeeRepository employeeRepository;
 	
-	@Autowired
-	private LoginRepository loginRepository;
+	
 	
 
 	
@@ -80,11 +79,7 @@ public class EmployeeController {
 	}
 	
 	
-	//Login Details Save
-	@PostMapping("/loginsave")
-	public Login loginSave(@RequestBody Login login) {
-		return loginRepository.save(login);
-	}
+	
 	
 
 }
